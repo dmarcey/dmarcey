@@ -1,4 +1,5 @@
 foo-contents
+edit
 
 old
 
