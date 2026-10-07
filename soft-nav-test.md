@@ -22,10 +22,14 @@ A soft nav shows no new document request. A layout fetch shows up as a
 
 - [tree: missing](/dmarcey/dmarcey/tree/master/foobar)
 
-## Different repo, to force the layout to reload (owner/repo change)
+## Different repo (owner/repo change, forces the layout to refetch)
 
-Open a different repo's code view first, then use a link to this file's repo
-from there (for example from an issue comment):
+Same-repo links reuse the cached layout, so they never fetch it. Linking to
+another repo changes owner/repo, which should refetch `_file_tree_layout`.
+Expect a `/_serverFn/...` request on click. A new document request means it was
+a hard nav instead.
 
-- https://github.com/dmarcey/dmarcey/tree/master/foobar/nested
-
+- [other repo: missing/nested](/octocat/Hello-World/tree/master/foobar/nested)
+- [other repo: bad ref + nested](/octocat/Hello-World/tree/not-a-branch/foobar/nested)
+- [other repo: missing nested blob](/octocat/Hello-World/blob/master/foobar/nested/file.md)
+- [other repo: single missing segment (control)](/octocat/Hello-World/tree/master/foobar)
