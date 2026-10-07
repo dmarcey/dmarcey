@@ -9,18 +9,18 @@ A soft nav shows no new document request. A layout fetch shows up as a
 
 ## Missing nested paths (the shape that used to 500 in dotcom)
 
-- [tree: missing/nested](/dmarcey/dmarcey/tree/master/foobar/nested)
-- [tree: missing/nested/deeper](/dmarcey/dmarcey/tree/master/foobar/nested/deeper)
-- [blob: missing/nested file](/dmarcey/dmarcey/blob/master/foobar/nested/file.md)
+- [tree: missing/nested](https://github.com/dmarcey/dmarcey/tree/master/foobar/nested)
+- [tree: missing/nested/deeper](https://github.com/dmarcey/dmarcey/tree/master/foobar/nested/deeper)
+- [blob: missing/nested file](https://github.com/dmarcey/dmarcey/blob/master/foobar/nested/file.md)
 
 ## Bad ref with a nested path (the case dotcom still 500s in its own tests)
 
-- [tree: bad ref](/dmarcey/dmarcey/tree/not-a-branch/foobar/nested)
-- [blob: bad ref](/dmarcey/dmarcey/blob/not-a-branch/foobar/nested/file.md)
+- [tree: bad ref](https://github.com/dmarcey/dmarcey/tree/not-a-branch/foobar/nested)
+- [blob: bad ref](https://github.com/dmarcey/dmarcey/blob/not-a-branch/foobar/nested/file.md)
 
 ## Single missing segment (control, should not 500)
 
-- [tree: missing](/dmarcey/dmarcey/tree/master/foobar)
+- [tree: missing](https://github.com/dmarcey/dmarcey/tree/master/foobar)
 
 ## Different repo (owner/repo change, forces the layout to refetch)
 
@@ -29,7 +29,7 @@ another repo changes owner/repo, which should refetch `_file_tree_layout`.
 Expect a `/_serverFn/...` request on click. A new document request means it was
 a hard nav instead.
 
-- [other repo: missing/nested](/octocat/Hello-World/tree/master/foobar/nested)
-- [other repo: bad ref + nested](/octocat/Hello-World/tree/not-a-branch/foobar/nested)
-- [other repo: missing nested blob](/octocat/Hello-World/blob/master/foobar/nested/file.md)
-- [other repo: single missing segment (control)](/octocat/Hello-World/tree/master/foobar)
+- [other repo: missing/nested](https://github.com/octocat/Hello-World/tree/master/foobar/nested)
+- [other repo: bad ref + nested](https://github.com/octocat/Hello-World/tree/not-a-branch/foobar/nested)
+- [other repo: missing nested blob](https://github.com/octocat/Hello-World/blob/master/foobar/nested/file.md)
+- [other repo: single missing segment (control)](https://github.com/octocat/Hello-World/tree/master/foobar)
