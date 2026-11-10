@@ -33,3 +33,5 @@ a hard nav instead.
 - [other repo: bad ref + nested](https://github.com/octocat/Hello-World/tree/not-a-branch/foobar/nested)
 - [other repo: missing nested blob](https://github.com/octocat/Hello-World/blob/master/foobar/nested/file.md)
 - [other repo: single missing segment (control)](https://github.com/octocat/Hello-World/tree/master/foobar)
+
+[Issue](https://github.com/dmarcey/dmarcey/issues/13)
